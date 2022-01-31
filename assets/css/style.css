@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin : 0;
+}
+
+body {
+  min-height        : 100vh;
+  display           : grid;
+  grid-template-rows: 75px 1fr;
+  font-family       : system-ui;
+  background        : linear-gradient(rgb(122, 1, 122), black);
+}
+
+header {
+  display              : grid;
+  grid-template-columns: 100px 400px;
+  align-items          : center;
+  justify-content      : space-between;
+  position             : fixed;
+  width                : 100%;
+  height               : 75px;
+  z-index              : 10;
+
+}
+
+header .logo {
+  margin-left: 20px;
+  color      : white;
+  cursor     : pointer;
+}
+
+header .navbar {
+  display        : flex;
+  justify-content: flex-end;
+  margin-right   : 20px;
+}
+
+header .navbar li {
+  list-style : none;
+  margin-left: 10px;
+  transition : .5s ease;
+}
+
+header .navbar li:hover a,
+.active {
+  background   : white;
+  color        : purple;
+  border-radius: 35px;
+}
+
+
+a {
+  text-decoration: none;
+  display        : inline-block;
+  padding        : 10px 20px;
+  color          : white;
+  transition     : .5s ease;
+}
+
+main .images {
+  width      : 100%;
+  height     : 100vh;
+  /* position: relative; */
+
+}
+
+main .images img {
+  position  : absolute;
+  width     : 100%;
+  height    : 100vh;
+  object-fit: cover;
+}
+
+.moon,
+.stars {
+  mix-blend-mode: screen;
+}
+
+.moon {
+  object-fit: contain !important;
+}
+
+
+
+main .content {
+  padding    : 20px;
+  padding-top: 100px;
+  color      : #eee;
+  background : #1a0818;
+  position   : relative;
+}
+
+main .content p {
+  margin-top: 20px;
+  text-align: justify;
+
+}
+
+@media(max-width: 756px) {
+  header {
+    height               : 150px;
+    grid-template-columns: 1fr;
+    grid-template-rows   : 50px 75px;
+
+  }
+
+  header .logo {
+    margin-left: 0;
+    text-align : center;
+  }
+
+  header .navbar {
+    justify-content: center;
+  }
+
+  .moon {
+    object-fit: cover !important;
+    margin-top: 75px;
+  }
+
+  main .content h2 {
+    font-size: 24px;
+  }
+
+  main .content p {
+    font-size: 80%;
+  }
+}
