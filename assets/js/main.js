@@ -24,11 +24,8 @@ onscroll = () => {
 
     if (scrollY >= 300) {
       moon.style.display = "none";
-      document.body.style.background = "linear-gradient(#5ac5d3, black)";
     } else {
       moon.style.display = "block";
-      document.body.style.background =
-        "linear-gradient(rgb(122, 1, 122), black)";
     }
   }
 };
